@@ -1,0 +1,35 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Express 2012 for Web
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "WEESemesterProject", ".", "{CF011F5C-65D7-43FD-AFAA-543F0D0B1868}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		Debug.AspNetCompiler.VirtualPath = "/WEESemesterProject"
+		Debug.AspNetCompiler.PhysicalPath = "..\..\..\..\..\..\..\git\WEESemesterProject\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\WEESemesterProject\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/WEESemesterProject"
+		Release.AspNetCompiler.PhysicalPath = "..\..\..\..\..\..\..\git\WEESemesterProject\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\WEESemesterProject\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "51748"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CF011F5C-65D7-43FD-AFAA-543F0D0B1868}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF011F5C-65D7-43FD-AFAA-543F0D0B1868}.Debug|Any CPU.Build.0 = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
