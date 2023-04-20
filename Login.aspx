@@ -7,6 +7,8 @@
    <!-- Login control with textfields for username and password. Automatically handles 
         everything required for logging into the web site, and provides a fairly good
         protection against SQL injection 
+       nk
+       xx
    -->
    <asp:Login ID="Login1" runat="server"></asp:Login> 
    
