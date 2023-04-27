@@ -23,6 +23,7 @@
     <asp:SiteMapDataSource ID="StudentSiteMapDataSource" runat="server" SiteMapProvider="StudentSitemap" />
     <asp:SiteMapDataSource ID="TeacherSiteMapDataSource" runat="server" SiteMapProvider="TeacherSitemap" />
     <asp:SiteMapDataSource ID="AdminSiteMapDataSource" runat="server" SiteMapProvider="AdminSitemap" />
+         <asp:SiteMapDataSource ID="CustomerSiteMapDataSource" runat="server" SiteMapProvider="CustomerSitemap" />
       
     <!-- We have to add a ScriptManager before we can use any of the AJAX Controls -->
     <asp:ToolkitScriptManager ID="ToolkitScriptManager1" runat="server"></asp:ToolkitScriptManager>
@@ -87,6 +88,13 @@
                     </asp:TreeView>
                   </ContentTemplate>
                 </asp:RoleGroup>
+                  
+                <asp:RoleGroup Roles="Customer">
+                  <ContentTemplate>
+                    <asp:TreeView ID="TreeView1" DataSourceID="CustomerSiteMapDataSource" runat="server" NodeIndent="10" ShowExpandCollapse="False" NodeStyle-CssClass="menunode" HoverNodeStyle-CssClass="menunodehover" SelectedNodeStyle-CssClass="menunodeselected" RootNodeStyle-CssClass="rootnode" ParentNodeStyle-CssClass="parentnode">
+                    </asp:TreeView>
+                  </ContentTemplate>
+                </asp:RoleGroup>
          
               </RoleGroups>
 
@@ -128,6 +136,13 @@
                   <asp:SiteMapPath ID="SiteMapPath1" runat="server" SiteMapProvider="AdminSitemap" PathSeparator=" >>" ForeColor="#ffaaa5"></asp:SiteMapPath>
                 </ContentTemplate>
               </asp:RoleGroup>
+                
+              <asp:RoleGroup Roles="Customer">
+                <ContentTemplate>
+                  <asp:SiteMapPath ID="SiteMapPath1" runat="server" SiteMapProvider="CustomerSitemap" PathSeparator=" >>" ForeColor="#ffaaa5"></asp:SiteMapPath>
+                </ContentTemplate>
+              </asp:RoleGroup>
+
               
             </RoleGroups>
                 
@@ -144,7 +159,7 @@
       <div id ="footer">
         <span class="footerspan"> Join Us</span>
       </div>
-    </div>
+  
   </form>
 </body>
 </html>
