@@ -18,11 +18,7 @@
     
   
 }
-.container {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Set the minimum and maximum column width for each item */
-  grid-gap: 10px; /* Set the gap between each item */
-}
+
 /* Set the style for each item in the grid */
 .product{
   width: 100%; /* Set the width of each item to fill the column */
@@ -35,42 +31,210 @@
   width: 100%; /* Set the width of the image to fill the container */
   height: auto; /* Set the height of the image to be proportional */
 }
-
-#header 
-{ 
-  font-size: 70px;
-  font-weight: 600;
-  background-image: linear-gradient(to left, #494949, #ffd3b6);
-  color: transparent;
-  padding-top:60px;
-    padding-bottom:70px;
-
+.image-grid {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
 }
 
-#container 
+.grid-container {
+  flex: 1 0 300px;
+  margin: 10px;
+  background-color: #494949;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+}
+
+.image-grid img {
+  width: 100px;
+  height: 200px;
+  object-fit: cover;
+}
+
+.description {
+  padding: 10px;
+  font-size: 16px;
+  background-color:	#F5F5DC; 
+  line-height: 1.4;
+}
+.ToTheBasket {
+      display: inline-block;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #fff;
+  background-color:#494949 ;
+  border: none;
+  border-radius: 6px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
+.Save
 {
-    width:100%;
-    background-color: #ece8d9; 
-    float:left;
-    clear:left;
-    border:1px solid #CFCFFF;
-    box-sizing:border-box;
+      display: inline-block;
+  padding: 8px 12px;
+  font-size: 10px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #fff;
+  background-color:#494949 ;
+  border: none;
+  border-radius: 3px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+
+
+/* styles for the child siteMapNode elements */
+#LoginView2_TreeView1n2,
+#LoginView2_TreeView1n3,
+.LoginView2_TreeView1n2 a,
+.LoginView2_TreeView1n3 a
+ {
+      display: inline;
+/* this fucks it up */
+
+}
+    #menu {
+  margin: 0;
+  padding: 0;
+  flex-direction: row;
+}
+
+#LoginView2_TreeView1_LoginView2_TreeView1,
+#LoginView2_TreeView1_LoginView2_TreeView1_1, 
+#LoginView2_TreeView1n2
+{
+  margin: 0;
+  padding: 0;
+}
+siteMapNode {
+ display: inline;
+  flex-direction: row;
+  list-style-type: none;
+  color: #ffd3b6;
+  margin: 0;
+  padding: 0;
+}
+
+#LoginView2_TreeView1n0Nodes,
+#LoginView2_TreeView1n0Nodes_1
+ {
+  overflow: visible;
+    display: inline;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+#LoginView2_TreeView1n0Nodes table {
+  border: none;
+}
+
+#LoginView2_TreeView1n0Nodes td {
+  padding: 0 10px;
+}
+
+#LoginView2_TreeView1n0Nodes a,
+#LoginView2_TreeView1n1Nodes a,
+#LoginView2_TreeView1n2Nodes a,
+#LoginView2_TreeView1n3Nodes a,
+.menunode a {
+  display: inline;
+  text-align: center;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 60px;
+  padding: 0 20px;
+  border-bottom: 4px solid transparent;
+  transition: border-bottom-color 0.3s ease-in-out;
+}
+
+#menu .treeview a,
+.menunode {
+ display:inline;
+  text-align: center;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 60px;
+
+  padding: 0 20px;
+  color: black;
+  border-bottom: 4px solid transparent;
+  transition: border-bottom-color 0.3s ease-in-out;
+}
+ 
+    #container {
+  background-color: #494949;
+  display:flex;
+  flex-direction: row;
+  list-style-type: none;
+  height: auto;
+
+  flex-wrap: nowrap;
+  list-style-type: none;
+  height: auto;
+}
+
+
+#menu,
+#LoginView2_TreeView1,
+.LoginView2_TreeView1 a,
+#LoginView2_TreeView1_LoginView2_TreeView1,
+#LoginView2_TreeView1n0Nodes,
+#LoginView2_TreeView1n1,
+#LoginView2_TreeView1n0Nodes table,
+#LoginView2_TreeView1n0Nodes td,
+#LoginView2_TreeView1n0Nodes a,
+#LoginView2_TreeView1n1Nodes table,
+#LoginView2_TreeView1n1Nodes td,
+#LoginView2_TreeView1n1Nodes a,
+.LoginView2_TreeView1_0,
+.LoginView2_TreeView1_1
+#LoginView2_TreeView1n2,
+.LoginView2_TreeView1_0 menunode LoginView2_TreeView1_1,
+.menunode LoginView2_TreeView1_2
+
+
+{
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  color: #ffd3b6;
+  margin: 0;
+  padding: 0;
+}
+
+
+
+.header-image {
+
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 30%; /* set the height of your header image */
+  width: 100%; /* set the width to fill the container */
+  position: relative; /* use relative positioning to overlay text on top */
 }
 
 #login
 {
-   float:right;
-   margin:5px 10px 0px 0px;
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 60px;
+  padding: 0 20px;
+  border-bottom: 4px solid transparent;
+  transition: border-bottom-color 0.3s ease-in-out;
+  float:right;
 }
 
-#menu
-{
-   width:18%;
-   min-width:100px;
-   float:left;
-   padding:10px;
-   box-sizing:border-box;
-}
+
 
 #content
 {
@@ -127,10 +291,7 @@
    font-weight:bold;
 }
 
-.menunode
-{
-    color:#ffaaa5;
-}
+
 
 .menunodeselected
 {
