@@ -12,6 +12,12 @@
 <label for="lastName">Last Name:</label>
 <input id="lastName" type="text" />
 <br />
+    <form>
+  <label for="email">Email address:</label>
+  <input type="email" id="email" name="email" required>
+  <input type="submit" value="Submit">
+</form>
+    <br />
 <label>Address:</label>
 <br />
 <label for="street">Street:</label>
@@ -20,6 +26,8 @@
 <label for="postCode">Post Code:</label>
 <input id="postCode" type="text" />
 <br />
+
+
 <label for="apartmentNumber">Apartment Number:</label>
 <input id="apartmentNumber" type="text" />
 
@@ -39,6 +47,25 @@
      <br/>
 
 
+<!-- JavaScript validation code -->
+<script>
+    function validateEmail() {
+        var emailInput = document.getElementById("email");
+        var email = emailInput.value;
+        if (!email.match(/^[^\s@]+@[^\s@]+\.[^\s@]+$/)) {
+            alert("Please enter a valid email address.");
+            emailInput.focus();
+            return false;
+        }
+        return true;
+    }
 
+    var form = document.querySelector("form");
+    form.addEventListener("Button1", function (event) {
+        if (!validateEmail()) {
+            event.preventDefault();
+        }
+    });
+</script>
 </asp:Content>
 

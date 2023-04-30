@@ -2,9 +2,8 @@
 <siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
     <siteMapNode url="Default.aspx" title="Home"  description="Home page" >
       <siteMapNode url="login.aspx" title="Log in"  description="" />
-      <siteMapNode url="loggedout.aspx" title="About"  description="" />
-      <siteMapNode url="customer/products.aspx" title="Products"  description="" />
-      <siteMapNode url="customer/basket.aspx" title="View Basket"  description="" />
+      <siteMapNode url="products.aspx" title="Products"  description="" />
+    
   </siteMapNode>  
 </siteMap>  
   

@@ -71,9 +71,16 @@ public partial class _basket : System.Web.UI.Page
 
         // Show the user that the booking has been added
         resultLabel.Text = "Item Deleted From Basket";
-
+        // Reload the page
+        ReloadPage();
 
     }
+    // Code in your C# file
+    protected void ReloadPage()
+    {
+        Response.Redirect(Request.RawUrl);
+    }
+
 
     protected void EditAmount_p(object sender, EventArgs e)
     {
@@ -142,6 +149,8 @@ public partial class _basket : System.Web.UI.Page
               string errorMessage = "An error occurred: " + ex.Message;
             
         }
+        // Reload the page
+        ReloadPage();
       
 
       
