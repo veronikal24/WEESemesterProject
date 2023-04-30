@@ -6,3 +6,5 @@ Website selling Beauty Products
 Customer has an account and can shop, 
 Guess can only see the products
 And admin can add new products, remove products and create new customers
+
+![image](https://user-images.githubusercontent.com/74155407/235361559-d2afe37d-c487-42b7-9ab4-cb7bdecb3cf7.png)
