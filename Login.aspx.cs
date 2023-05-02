@@ -10,5 +10,9 @@ public partial class Login : System.Web.UI.Page
     protected void Page_Load(object sender, EventArgs e)
     {
   
-    }   
+    }
+    protected void create_account_nav(object sender, EventArgs e)
+    {
+        Response.Redirect("create_account.aspx");
+    }  
 }

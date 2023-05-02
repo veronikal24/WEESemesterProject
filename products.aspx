@@ -36,7 +36,7 @@
                  Description: <asp:Label ID="seatsLabel" runat="server" Text='<%# Eval("description") %>' />
                   <br />
              
-                  <asp:Button ID="Button1" runat="server" Text="Add To Basket" CssClass ="ToTheBasket" CommandName="select" />
+                  <asp:Button ID="Button1" runat="server" Text="Add To Basket" CssClass ="ToTheBasket" CommandName="select"/>
                   <br/>
         </div>
           

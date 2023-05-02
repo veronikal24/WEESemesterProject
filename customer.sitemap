@@ -3,6 +3,7 @@
 <siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0">
   <siteMapNode url="products.aspx" title="Products" description="">
     <siteMapNode url="customer/basket.aspx" title="View Basket" description="" />
+    <siteMapNode url="customer/order_history.aspx" title="Order History" description="" />
   </siteMapNode>
 </siteMap>
 

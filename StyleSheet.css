@@ -334,3 +334,25 @@ siteMapNode {
 {
    text-decoration:none;
 }
+  .order-history {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+    .order-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+        border-bottom: 1px solid #ddd;
+        padding-bottom: 20px;
+    }
+    .order-item-image {
+        flex-basis: 30%;
+        margin-right: 20px;
+    }
+    .order-item-details {
+        flex-basis: 70%;
+    }
+    .order-items {
+        margin-top: 20px;
+    }

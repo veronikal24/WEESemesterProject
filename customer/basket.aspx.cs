@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 using System.Data.SqlClient;
 using System.Configuration;
 using System.Diagnostics;
-using System.Web.UI.WebControls;
+
 
 public partial class _basket : System.Web.UI.Page
 {
@@ -81,12 +81,8 @@ public partial class _basket : System.Web.UI.Page
         Response.Redirect(Request.RawUrl);
     }
 
-
     protected void EditAmount_p(object sender, EventArgs e)
     {
-
-    
-      
         try
         {
             int newAmount = 1;
@@ -98,9 +94,6 @@ public partial class _basket : System.Web.UI.Page
                 newAmount = int.Parse(amountValue);
                 Console.WriteLine(amountValue);
             }
-
-
-
             System.Web.UI.Control control2 = (System.Web.UI.Control)sender;
             Label myLabel = (Label)control2.FindControl("productLabel");
             string labelText = "";
@@ -122,14 +115,10 @@ public partial class _basket : System.Web.UI.Page
                 using (SqlCommand command = new SqlCommand(sql, connection))
                 {
 
-                   
-
                     // Fill in the parameters in our prepared SQL statement
                     command.Parameters.AddWithValue("@amount", newAmount);
                     command.Parameters.AddWithValue("@product_name", labelText);
                     command.Parameters.AddWithValue("@customer_id", this.User.Identity.Name);
-
-
                     connection.Open();
 
                     int rowsAffected = command.ExecuteNonQuery();
@@ -151,9 +140,6 @@ public partial class _basket : System.Web.UI.Page
         }
         // Reload the page
         ReloadPage();
-      
-
-      
     }
     /*method for retrieving the customer_id for the query */
     protected void SqlDataSource1_Selecting(object sender, SqlDataSourceSelectingEventArgs e)
@@ -161,12 +147,14 @@ public partial class _basket : System.Web.UI.Page
         e.Command.Parameters["@customer_id"].Value = Context.User.Identity.Name;
     }
 
+
+
+
     protected void continue_topay(object sender, EventArgs e)
     {
-
         Response.Redirect("checkout.aspx");
-
-
     }
+
+    
  
 }
