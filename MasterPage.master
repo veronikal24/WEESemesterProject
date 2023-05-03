@@ -30,40 +30,38 @@
     
     <div id="wrapper">
       <div id="header">
-      
+         <div class="content2"  >   
   <asp:Image runat="server"  CssClass ="header-image"  ImageUrl="~/images/header.jpg" />
  
-     
+      </div>
+          
       </div>
           
    <div id="container">
        
-         <div id="menu">
-        
             <!-- Separate HTML for logged in and not logged in users.
                 Menu based on default sitemap for not logged in users.
                 Menu based on custom sitemaps for logged in users, depending on their role.
             -->
-            <asp:LoginView ID="LoginView2" runat="server">
+            <asp:LoginView  runat="server">
                  
               <AnonymousTemplate>
-                <asp:TreeView ID="TreeView1" DataSourceID="SiteMapDataSource1" runat="server" ShowExpandCollapse="False" >
+                <asp:TreeView  DataSourceID="SiteMapDataSource1" runat="server" ShowExpandCollapse="False" NodeStyle-CssClass="menunode"  HoverNodeStyle-CssClass="menunode" SelectedNodeStyle-CssClass="menunode" RootNodeStyle-CssClass="menunode" ParentNodeStyle-CssClass="menunode" LeafNodeStyle-CssClass="menunode" CssClass="menunode">
                 </asp:TreeView>
               </AnonymousTemplate>
                              
               <RoleGroups>
 
-
                 <asp:RoleGroup Roles="Admin">
                   <ContentTemplate>
-                    <asp:TreeView ID="TreeView1" DataSourceID="AdminSiteMapDataSource" runat="server" ShowExpandCollapse="False" NodeStyle-CssClass="menunode"  HoverNodeStyle-CssClass="menunode" SelectedNodeStyle-CssClass="menunode" RootNodeStyle-CssClass="menunode" ParentNodeStyle-CssClass="menunode" NodeIndent="2" LeafNodeStyle-CssClass="menunode" CssClass="menunode">
+                    <asp:TreeView  DataSourceID="AdminSiteMapDataSource" runat="server" ShowExpandCollapse="False" NodeStyle-CssClass="menunode"  HoverNodeStyle-CssClass="menunode" SelectedNodeStyle-CssClass="menunode" RootNodeStyle-CssClass="menunode" ParentNodeStyle-CssClass="menunode" LeafNodeStyle-CssClass="menunode" CssClass="menunode">
                     </asp:TreeView>
                   </ContentTemplate>
                 </asp:RoleGroup>
                   
                 <asp:RoleGroup Roles="Customer">
                   <ContentTemplate>
-                    <asp:TreeView ID="TreeView1" DataSourceID="CustomerSiteMapDataSource" runat="server"  ShowExpandCollapse="False" NodeStyle-CssClass="menunode"   HoverNodeStyle-CssClass="menunode" SelectedNodeStyle-CssClass="menunode" RootNodeStyle-CssClass="menunode" ParentNodeStyle-CssClass="menunode">
+                    <asp:TreeView  DataSourceID="CustomerSiteMapDataSource" runat="server"  ShowExpandCollapse="False" NodeStyle-CssClass="menunode"   HoverNodeStyle-CssClass="menunode" SelectedNodeStyle-CssClass="menunode" RootNodeStyle-CssClass="menunode" ParentNodeStyle-CssClass="menunode">
                   </asp:TreeView>
                   </ContentTemplate>
  
@@ -71,22 +69,26 @@
               </RoleGroups>
             </asp:LoginView>
               
-        </div>
+  
       </div>
+           <div class="content"  >
           <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
-          </asp:ContentPlaceHolder>
+         
+               </asp:ContentPlaceHolder>
         </div>
-
+      
       <div id ="footer">
         <span class="footerspan"> Join Us</span>
           <div id="login">
           <asp:LoginView ID="LoginView1" runat="server">
             <AnonymousTemplate>
-              Welcome: Guest, <asp:LoginStatus ID="LoginStatus1" runat="server" />
+              Welcome: Guest, <asp:LoginStatus ID="LoginStatus1" runat="server" CssClass="loggedIn"  />
             </AnonymousTemplate>
             <LoggedInTemplate>
-              Welcome: <asp:LoginName ID="LoginName1" runat="server" />, 
-              <asp:LoginStatus ID="LoginStatus2" runat="server" LogoutPageUrl="loggedout.aspx" LogoutAction="Redirect" />
+              Welcome: <asp:LoginName ID="LoginName1" runat="server" CssClass="loggedIn" />
+
+             
+                 <asp:LoginStatus ID="LoginStatus2" runat="server" LogoutPageUrl="loggedout.aspx" LogoutAction="Redirect" CssClass="logout-link" />
             </LoggedInTemplate> 
           </asp:LoginView>
         </div> 

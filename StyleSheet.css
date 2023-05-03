@@ -127,137 +127,137 @@ nav img.logo {
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
   transition: all 0.3s ease;
 }
-
-
-
-/* styles for the child siteMapNode elements */
-#LoginView2_TreeView1n2,
-#LoginView2_TreeView1n3,
-.LoginView2_TreeView1n2 a,
-.LoginView2_TreeView1n3 a
- {
-      display: inline;
-/* this fucks it up */
-
-}
-    #menu {
-  margin: 0;
-  padding: 0;
-  flex-direction: row;
-}
-
-#LoginView2_TreeView1_LoginView2_TreeView1,
-#LoginView2_TreeView1_LoginView2_TreeView1_1, 
-#LoginView2_TreeView1n2
-{
-  margin: 0;
-  padding: 0;
-}
-siteMapNode {
- display: inline;
-  flex-direction: row;
-  list-style-type: none;
-  color: #ffd3b6;
-  margin: 0;
-  padding: 0;
-}
-
-#LoginView2_TreeView1n0Nodes,
-#LoginView2_TreeView1n0Nodes_1
- {
-  overflow: visible;
-    display: inline;
-  flex-direction: row;
-  flex-wrap: wrap;
-}
-
-#LoginView2_TreeView1n0Nodes table {
-  border: none;
-}
-
-#LoginView2_TreeView1n0Nodes td {
-  padding: 0 10px;
-}
-
-#LoginView2_TreeView1n0Nodes a,
-#LoginView2_TreeView1n1Nodes a,
-#LoginView2_TreeView1n2Nodes a,
-#LoginView2_TreeView1n3Nodes a,
-.menunode a {
-  display: inline;
-  text-align: center;
-  text-decoration: none;
-  font-size: 18px;
-  line-height: 60px;
-  padding: 0 20px;
-  border-bottom: 4px solid transparent;
-  transition: border-bottom-color 0.3s ease-in-out;
-}
-
-#menu .treeview a,
-.menunode {
- display:inline;
-  text-align: center;
-  text-decoration: none;
-  font-size: 18px;
-  line-height: 60px;
-
-  padding: 0 20px;
-  color: black;
-  border-bottom: 4px solid transparent;
-  transition: border-bottom-color 0.3s ease-in-out;
-}
- 
-    #container {
-  background-color: #494949;
-  display:flex;
-  flex-direction: row;
-  list-style-type: none;
-  height: auto;
-
-  flex-wrap: nowrap;
-  list-style-type: none;
-  height: auto;
-}
-
-
-#menu,
-#LoginView2_TreeView1,
-.LoginView2_TreeView1 a,
-#LoginView2_TreeView1_LoginView2_TreeView1,
-#LoginView2_TreeView1n0Nodes,
-#LoginView2_TreeView1n1,
-#LoginView2_TreeView1n0Nodes table,
-#LoginView2_TreeView1n0Nodes td,
-#LoginView2_TreeView1n0Nodes a,
-#LoginView2_TreeView1n1Nodes table,
-#LoginView2_TreeView1n1Nodes td,
-#LoginView2_TreeView1n1Nodes a,
-.LoginView2_TreeView1_0,
-.LoginView2_TreeView1_1
-#LoginView2_TreeView1n2,
-.LoginView2_TreeView1_0 menunode LoginView2_TreeView1_1,
-.menunode LoginView2_TreeView1_2
-
-
-{
+.pagination {
   display: flex;
-  flex-direction: row;
-  list-style-type: none;
-  color: #ffd3b6;
-  margin: 0;
-  padding: 0;
+  justify-content: center;
+  align-items: center;
+}
+
+.pagination-link,
+.pagination-nextprev {
+  background-color: #fff;
+  border: 1px solid #f8d7da;
+  color: #f8d7da;
+  padding: 0.5rem;
+  margin-right: 0.25rem;
+}
+
+.pagination-link:hover,
+.pagination-nextprev:hover {
+  background-color: #f8d7da;
+  color: #fff;
+}
+
+.pagination-link.is-current {
+  background-color: #f8d7da;
+  color: #fff;
+}
+.Left {
+    background-color: lightpink;
+    border: 2px solid lightpink;
+    color: white;
+    font-size: 16px;
+    padding: 10px 20px;
+}
+
+.pagination-nextprev[disabled] {
+  opacity: 0.5;
+  pointer-events: none;
 }
 
 
+ .content {
+    margin-left: 270px; /* match the width of the left column */
+    margin-bottom:100px;
+  }
+ 
+ .content2 {
+    margin-left: 240px; /* match the width of the left column */
+  }
+  .clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+#container {
 
+    
+  position: fixed; /* Keep the sidebar fixed */
+  top: 0; /* Position the sidebar at the top */
+  left: 0; /* Position the sidebar at the left */
+  width: 250px; /* Set the width of the sidebar */
+  height: 100%; /* Set the height of the sidebar */
+  background-color: #f1f1f1; /* Set the background color of the sidebar */
+  overflow-x: hidden; /* Hide the horizontal scrollbar */
+  padding-top: 20px; /* Add some padding at the top */
+}
+
+#menu {
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  background-color: #A64D79;
+  padding: 10px;
+  width: 150px;
+}
+#footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 50px; /* Change the value to adjust the height of the footer */
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding-top: 15px;
+}
+
+
+.menunode a,
+.menunode td {
+  display: block;
+  color: #A64D79;
+  margin: 5px 0;
+  padding: 10px;
+ 
+  text-align: center;
+}
+
+.nodes,
+.menunode td a {
+  display: block;
+  margin-left: 20px;
+}
+
+.box {
+  background-color: #faf0e6;
+  color: #494949;
+  font-size: 16px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.25);
+}
+
+ 
 .header-image {
 
   background-repeat: no-repeat;
   background-size: cover;
-  height: 30%; /* set the height of your header image */
+  height: 50% ;/* set the height of your header image */
   width: 100%; /* set the width to fill the container */
   position: relative; /* use relative positioning to overlay text on top */
+}
+.loggedIn {
+    color: pink;
+}
+/* Change the background color to pink */
+#LoginStatus2 {
+  background-color: pink;
+}
+
+/* Change the color of the text to white */
+#LoginStatus2 a {
+  color: white;
 }
 
 #login
@@ -285,6 +285,7 @@ siteMapNode {
     box-sizing:border-box; 
 }
 
+
 #footer
 {
     width:100%;
@@ -301,7 +302,10 @@ siteMapNode {
     border-bottom-right-radius:10px;
     box-sizing:border-box;
 }
-
+.logout-link {
+  color: pink;
+  text-decoration: none;
+}
 .heading {
     font-size: 130%;
     font-weight: bold;

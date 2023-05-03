@@ -41,20 +41,21 @@
 
 
 
-        <LayoutTemplate>
-            <div id="itemPlaceholderContainer" runat="server" style="">
-                <span runat="server" id="itemPlaceholder" />
-            </div>
-            <div style="clear:both;text-align: center;">
-                <asp:DataPager ID="DataPager1" runat="server" PageSize="6">
-                    <Fields>
-                        <asp:NextPreviousPagerField ButtonType="Button" ShowFirstPageButton="True" ShowNextPageButton="False" ShowPreviousPageButton="False" />
-                        <asp:NumericPagerField />
-                        <asp:NextPreviousPagerField ButtonType="Button" ShowLastPageButton="True" ShowNextPageButton="False" ShowPreviousPageButton="False" />
-                    </Fields>
-                </asp:DataPager>
-            </div>
-        </LayoutTemplate>
+     <LayoutTemplate>
+    <div id="itemPlaceholderContainer" runat="server" style="background-color: #ffe0e6; padding: 10px;">
+        <span runat="server" id="itemPlaceholder" />
+    </div>
+        <div style="clear: both; text-align: center; background-color: #FFE4E1; padding: 10px;">
+<asp:DataPager ID="DataPager1" runat="server" PageSize="6">
+    <Fields>
+        <asp:NextPreviousPagerField ButtonType="Button" ShowFirstPageButton="True" ShowNextPageButton="False" ShowPreviousPageButton="False" ButtonCssClass="Left" />
+             <asp:NumericPagerField ButtonType="Button" CurrentPageLabelCssClass="Lef" />
+        <asp:NextPreviousPagerField ButtonType="Button" ShowLastPageButton="True" ShowNextPageButton="False" ShowPreviousPageButton="False" ButtonCssClass="Left" />
+    </Fields>
+</asp:DataPager>
+    </div>
+</LayoutTemplate>
+
       </asp:ListView>
 
      <asp:SqlDataSource ID="SqlDataSource1" runat="server" 
