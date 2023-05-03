@@ -3,7 +3,7 @@
 
       <siteMapNode class ="product" url="admin/order_history.aspx" title="Order History" description="">
       <siteMapNode url="admin/add_newproducts.aspx" title="Add New Products"  description="" />
-        <siteMapNode url="products.aspx" title="Products"  description="" />
+        <siteMapNode url="admin/products.aspx" title="Product Overview"  description="" />
 
   </siteMapNode>
 </siteMap>  

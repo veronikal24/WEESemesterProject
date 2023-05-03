@@ -45,7 +45,84 @@
                   <br/>
      <br/>
 
+<style>
 
+    /* apply some basic styles to the form elements */
+input[type="text"], input[type="email"] {
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  margin: 10px;
+  font-size: 16px;
+  width: 100%;
+    margin-left:50px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+    margin-left:50px;
+}
+
+h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  margin-left:50px;
+}
+
+    h2 {
+        font-size: 20px;
+        margin-top: 30px;
+        margin-bottom: 10px;
+          margin-left:50px;
+    }
+
+.ToTheBasket {
+  background-color: #9E425E;
+  border: none;
+  color: white;
+    margin-left:50px;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-top: 20px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.ToTheBasket:hover {
+  background-color: #3e8e41;
+}
+
+/* apply some styles to the error messages */
+input:invalid {
+  border-color: red;
+}
+
+input:invalid + span:before {
+  content: "✖ ";
+  color: red;
+  font-size: 14px;
+}
+
+input:valid + span:before {
+  content: "✓ ";
+  color: #9E425E;
+  font-size: 14px;
+}
+
+input:focus {
+  outline: none;
+  box-shadow: 0 0 5px #ccc;
+}
+
+
+
+
+</style>
 <!-- JavaScript validation code -->
 <script>
     function validateEmail() {

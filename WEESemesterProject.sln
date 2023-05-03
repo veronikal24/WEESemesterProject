@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Express 2012 for Web
 Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "WEESemesterProject", ".", "{2D9DE035-6963-4156-B1EE-39CBDC42CA17}"
 	ProjectSection(WebsiteProperties) = preProject
-		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.8"
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5"
 		Debug.AspNetCompiler.VirtualPath = "/WEESemesterProject"
 		Debug.AspNetCompiler.PhysicalPath = "..\WEESemesterProject\"
 		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\WEESemesterProject\"

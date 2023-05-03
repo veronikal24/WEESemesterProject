@@ -16,31 +16,31 @@
           No products availaible.
         </EmptyDataTemplate>
       
-        <ItemTemplate>
-            <!-- The ItemTemplate defines how each item in the database will be displayed. 
-              To get the value from each column we can use Eval("columnName") 
-         --> 
-         <div class ="grid-container">
-        
-               <!-- Set the image by using the conditional operator. If no image path is in the 
-                    database, then use standard image, else use the image path from the database 
-               --> 
-                          <div class ="grid-item">  
-               <asp:Image ID="image" runat="server" ImageUrl='<%# Eval("image_url").ToString() == "" ? "~/images/header.png"  : Eval("image_url") %>' AlternateText="Room Image"/>
-            </div>
-                   
-          <div class="description">
-       
-                  Name: <asp:Label ID="croomidLabel" runat="server" Text='<%# Eval("name") %>' />
-                  <br />
-                 Description: <asp:Label ID="seatsLabel" runat="server" Text='<%# Eval("description") %>' />
-                  <br />
-             
-                  <asp:Button ID="Button1" runat="server" Text="Add To Basket" CssClass ="ToTheBasket" CommandName="select"/>
+     
+
+         
+                  <ItemTemplate>
+                <div class="order-item">
+                    <div class="order-item-image">
+                        <asp:Image ID="image" runat="server" 
+                            ImageUrl='<%# Eval("image_url").ToString() == "" ? "~/images/header.png" : Eval("image_url") %>'
+                            AlternateText="Basket Image" />
+                    </div>
+                    <div class="order-item-details">
+                        <p><strong>Product Name:</strong> 
+                            <asp:Label ID="productLabel" runat="server" Text='<%# Eval("name") %>' /></p>
+                        <p><strong>Amount:</strong> 
+                            <asp:Label ID="amountLabel" runat="server" Text='<%# Eval("description") %>' /></p>
+                
+                           <asp:Button ID="Button1" runat="server" Text="Add To Basket" CssClass ="ToTheBasket" CommandName="select"/>
                   <br/>
-        </div>
-          
-        </ItemTemplate>
+                    </div>
+                </div>
+            </ItemTemplate>
+
+
+
+
         <LayoutTemplate>
             <div id="itemPlaceholderContainer" runat="server" style="">
                 <span runat="server" id="itemPlaceholder" />

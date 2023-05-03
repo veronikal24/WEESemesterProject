@@ -20,17 +20,10 @@ public partial class customer_checkout : System.Web.UI.Page
         // just fake something and maybe show a new page with your confirmation has been created this
         //this is your order, and move the basket information to Order Table and show that in that page
 
-
-
-
         //OMG you are soooo creative
     }
     protected void continue_toconfirm(object sender, EventArgs e)
     {
-
-
-
-      
         try
         {
             string connectionString = ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
@@ -56,7 +49,6 @@ public partial class customer_checkout : System.Web.UI.Page
                     }
                 }
             }
-
         }
         catch (Exception ex)
         {

@@ -34,7 +34,7 @@ public partial class _basket : System.Web.UI.Page
         }
         int newAmount = 1;
         System.Web.UI.Control control = (System.Web.UI.Control)sender;
-        Label amount = (Label)control.FindControl("amountLabel");
+        Label amount = (Label)control.FindControl("name");
         if (amount != null)
         {
             string amountValue = amount.Text;
