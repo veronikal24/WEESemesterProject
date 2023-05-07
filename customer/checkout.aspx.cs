@@ -14,21 +14,14 @@ public partial class customer_checkout : System.Web.UI.Page
     {
 
     }
-    protected void edit_products(object sender, EventArgs e)
-    {
-        // You wannna verify the credit card information here
-        // just fake something and maybe show a new page with your confirmation has been created this
-        //this is your order, and move the basket information to Order Table and show that in that page
-
-        //OMG you are soooo creative
-    }
+   
     protected void continue_toconfirm(object sender, EventArgs e)
     {
         try
         {
             string connectionString = ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
 
-            string sql = "BEGIN TRANSACTION  INSERT INTO [ORDER] (order_id, customer_id, product_name, price, amount, image_url) SELECT COALESCE((SELECT MAX(order_id) FROM [ORDER]), 0) + ROW_NUMBER() OVER (ORDER BY [timestamp]), [customer_id], [product_name], [price], [amount], [image_url] FROM [Basket]WHERE [customer_id] =  @customer_id DELETE FROM [Basket] WHERE [customer_id] =  @customer_id COMMIT TRANSACTION ";
+            string sql = "DECLARE @max_order_id INT;SELECT @max_order_id = COALESCE(MAX(order_id), 0) FROM [ORDER];SET @max_order_id = @max_order_id + 1; BEGIN TRANSACTION; INSERT INTO [ORDER] (order_id, customer_id, product_name, price, amount, image_url) SELECT @max_order_id, [customer_id], [product_id], [price], [amount], [image_url] FROM [Basket] WHERE [customer_id] = @customer_id; DELETE FROM [Basket] WHERE [customer_id] = @customer_id;COMMIT TRANSACTION;";
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 using (SqlCommand command = new SqlCommand(sql, connection))

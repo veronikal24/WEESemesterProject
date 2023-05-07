@@ -15,7 +15,7 @@ public partial class _basket : System.Web.UI.Page
     {
 
     }
-    protected void edit_products(object sender, EventArgs e)
+    protected void delete_products(object sender, EventArgs e)
     {
 
         string dbstring = ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
@@ -50,7 +50,7 @@ public partial class _basket : System.Web.UI.Page
 
         // The SQL statement to insert a booking. By using prepared statements,
         // we automatically get some protection against SQL injection.
-        string sqlStr = " Delete from [dbo].[Basket]  where customer_id =  @customer_id and product_name = @product_name and amount = @amount";
+        string sqlStr = " Delete from [dbo].[Basket]  where customer_id =  @customer_id and product_name = @product_name";
 
         // Open the database connection
         con.Open();
@@ -61,7 +61,7 @@ public partial class _basket : System.Web.UI.Page
         // Fill in the parameters in our prepared SQL statement
         sqlCmd.Parameters.AddWithValue("@product_name", labelText);
         sqlCmd.Parameters.AddWithValue("@customer_id", this.User.Identity.Name);
-        sqlCmd.Parameters.AddWithValue("@amount", newAmount);
+   
 
         // Execute the SQL command
         sqlCmd.ExecuteNonQuery();
@@ -81,7 +81,7 @@ public partial class _basket : System.Web.UI.Page
         Response.Redirect(Request.RawUrl);
     }
 
-    protected void EditAmount_p(object sender, EventArgs e)
+    protected void edit_amount(object sender, EventArgs e)
     {
         try
         {

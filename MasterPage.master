@@ -16,11 +16,8 @@
   <form id="form1" runat="server"> 
        
     <!-- Default SiteMapProvider using the Web.sitemap file -->
-    <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server" />
+    <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server"/>
     
-    <!-- My custom SiteMapProviders configured in web.config to use  
-           the admin.sitemap, teacher.sitemap and student.sitemap files 
-    -->
 
     <asp:SiteMapDataSource ID="AdminSiteMapDataSource" runat="server" SiteMapProvider="AdminSitemap" />
          <asp:SiteMapDataSource ID="CustomerSiteMapDataSource" runat="server" SiteMapProvider="CustomerSitemap" />
@@ -39,10 +36,6 @@
           
    <div id="container">
        
-            <!-- Separate HTML for logged in and not logged in users.
-                Menu based on default sitemap for not logged in users.
-                Menu based on custom sitemaps for logged in users, depending on their role.
-            -->
             <asp:LoginView  runat="server">
                  
               <AnonymousTemplate>
@@ -76,7 +69,7 @@
          
                </asp:ContentPlaceHolder>
         </div>
-      
+ 
       <div id ="footer">
         <span class="footerspan"> Join Us</span>
           <div id="login">
@@ -86,8 +79,6 @@
             </AnonymousTemplate>
             <LoggedInTemplate>
               Welcome: <asp:LoginName ID="LoginName1" runat="server" CssClass="loggedIn" />
-
-             
                  <asp:LoginStatus ID="LoginStatus2" runat="server" LogoutPageUrl="loggedout.aspx" LogoutAction="Redirect" CssClass="logout-link" />
             </LoggedInTemplate> 
           </asp:LoginView>

@@ -4,6 +4,8 @@
 
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+ 
+
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
 
@@ -16,20 +18,19 @@
           <!-- Defines what should be displayed if no items are returned from the database -->
           No products in the Basket.
         </EmptyDataTemplate>
-      
+     
         <ItemTemplate>
             <!-- The ItemTemplate defines how each item in the database will be displayed. 
               To get the value from each column we can use Eval("columnName") 
          --> 
-         <div class ="grid-container">
         
                <!-- Set the image by using the conditional operator. If no image path is in the 
                     database, then use standard image, else use the image path from the database 
                --> 
                           <div class ="grid-item">  
                            
-               <asp:Image ID="image" runat="server" ImageUrl='<%# Eval("image_url").ToString() == "" ? "~/images/header.png"  : Eval("image_url") %>' AlternateText="Basket Image"/>
-            </div>
+               <asp:Image ID="image" CssClass ="grid-item" runat="server" ImageUrl='<%# Eval("image_url").ToString() == "" ? "~/images/header.png"  : Eval("image_url") %>' AlternateText="Basket Image"/>
+   
                    
           <div class="description">
        
@@ -38,17 +39,18 @@
                  Amount: <asp:Label ID="amountLabel" runat="server" Text='<%# Eval("amount") %>' />
                <br />
               Edit Amount:    <asp:TextBox ID="amount" runat="server" Enabled="true" Text='<%# Eval("amount") %>' ></asp:TextBox>
- <asp:Button ID="EditAmount" runat="server" Text="Save" CssClass ="Save" CommandName="select" OnClick="EditAmount_p" />
+ <asp:Button ID="EditAmount" runat="server" Text="Save" CssClass ="Save" CommandName="select" OnClick="edit_amount" />
                <br />
               Unit Price: <asp:Label ID="Label2" runat="server" Text='<%# Eval("price") %>' />
                   <br />
                Total Price: <asp:Label ID="Label1" runat="server" Text='<%# Eval("total_price") %>' />
                   <br />
             
-                  <asp:Button ID="Button1" runat="server" Text="Remove From THe Basket" CssClass ="ToTheBasket" CommandName="select" OnClick="edit_products" />
+                  <asp:Button ID="Button1" runat="server" Text="Remove From THe Basket" CssClass ="ToTheBasket" CommandName="select" OnClick="delete_products" />
                   <br/>
         </div>
         </ItemTemplate>
+                    
             
                  <LayoutTemplate> 
        
@@ -69,11 +71,12 @@
         <LayoutTemplate>
             <div id="itemPlaceholderContainer" runat="server" style="">
                 <span runat="server" id="itemPlaceholder" />
-                
+                 <div class="proceed-to-payment">
                   Total Price: <asp:Label ID="productLabel" runat="server" Text='<%# Eval("total_price") %>' />
                   <br />       
                   <asp:Button ID="Button1" runat="server" Text="Proceed to Payment" CssClass ="ToTheBasket" CommandName="select" OnClick="continue_topay" />
                   <br/>
+                          </div>
             </div>
             <div style="clear:both;text-align: center;">
                 <asp:DataPager ID="DataPager1" runat="server" PageSize="6">

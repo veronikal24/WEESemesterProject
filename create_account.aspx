@@ -3,34 +3,48 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
-    <span class="headingspan">Create a new account:</span> <br/><br/> 
+    <span class="headingspan">Create a new account</span> <br/><br/> <br/><br/> 
      <style>
    body {
       font-family: Arial, sans-serif;
       background-color: #f7f7f7;
     }
+         .headingspan {
+                  font-size: 22px;
+      font-weight: bold;
+      text-align: center;
+      margin-left: 240px;
+      margin-bottom:20px;
+      margin-top:140px;
+      padding:20px;
+      background-color: #F2ACB9;
+
+         }
     
-    .container {
+    .container{
       width: 80%;
       max-width: 600px;
+      margin-left: 200px;
       margin: 0 auto;
       padding: 20px;
       border-radius: 5px;
       box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
       background-color: #fff;
+    
     }
+       
     
     .heading {
       font-size: 32px;
       font-weight: bold;
       text-align: center;
-      margin-bottom: 20px;
+      margin-bottom: 10px;
     }
     
     label {
       display: block;
       font-weight: bold;
-      margin-bottom: 5px;
+      margin-bottom: 25px;
     }
     
     input[type="text"],
@@ -45,7 +59,7 @@
     }
     
     input[type="submit"] {
-      background-color: #ff69b4;
+      background-color: #F2ACB9;
       color: #fff;
       border: none;
       border-radius: 5px;
@@ -54,7 +68,9 @@
       font-weight: bold;
       cursor: pointer;
     }
-    
+         .signup {
+             margin-left:150px;
+         }
     input[type="submit"]:hover {
       background-color: #e55a9a;
     }
@@ -63,11 +79,8 @@
         <WizardSteps>
             <asp:CreateUserWizardStep ID="CreateUserWizardStep1" runat="server">
                 <ContentTemplate> 
-                    <table> 
-                        <tr>
-                            <td align="center" colspan="2">Sign Up for Your New Account</td>
-                        </tr>
-                        <tr> 
+                    <table class ="signup"> 
+                     
                             <td align="right">
                                 <asp:Label ID="UserNameLabel" runat="server" AssociatedControlID="UserName">User Name:</asp:Label>
                             </td>

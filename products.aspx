@@ -6,8 +6,8 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
 
-     <asp:ListView ID="Products" runat="server" DataKeyNames="name" 
-         DataSourceID="SqlDataSource1" OnSelectedIndexChanged="selected_product">
+     <asp:ListView ID="Products" runat="server" DataKeyNames="id" 
+         DataSourceID="SqlDataSource1" OnSelectedIndexChanged="selected_product_addtobasket">
          
       
        
@@ -29,9 +29,11 @@
                     <div class="order-item-details">
                         <p><strong>Product Name:</strong> 
                             <asp:Label ID="productLabel" runat="server" Text='<%# Eval("name") %>' /></p>
-                        <p><strong>Amount:</strong> 
-                            <asp:Label ID="amountLabel" runat="server" Text='<%# Eval("description") %>' /></p>
-                
+                            <p><strong>Description:</strong> 
+                            <asp:Label ID="description" runat="server" Text='<%# Eval("description") %>' /></p>
+                        <p><strong>Price:</strong> 
+                            <asp:Label ID="amountLabel" runat="server" Text='<%# Eval("price") %>' /></p>
+        
                            <asp:Button ID="Button1" runat="server" Text="Add To Basket" CssClass ="ToTheBasket" CommandName="select"/>
                   <br/>
                     </div>
@@ -60,7 +62,7 @@
 
      <asp:SqlDataSource ID="SqlDataSource1" runat="server" 
          ConnectionString="<%$ ConnectionStrings:ConnectionString %>" 
-         SelectCommand="SELECT [name], [description], [image_url] FROM [Product] ORDER BY [name]">
+         SelectCommand="SELECT [id],[name], [description],[price], [image_url] FROM [Product] ORDER BY [name]">
      </asp:SqlDataSource>
     <asp:Label ID="resultLabel" runat="server"></asp:Label>
 

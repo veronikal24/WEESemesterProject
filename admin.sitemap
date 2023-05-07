@@ -1,9 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
-  <siteMapNode url="admin/products.aspx" title="Product Overview"  description="" >
-    <siteMapNode class ="product" url="admin/order_history.aspx" title="Order History" description=""/>
+  <siteMapNode url="admin/products.aspx" title="Product Overview - Edit"  description="" >
+    <siteMapNode url="admin/productsbycat/body.aspx" title="Body"  description=""/>
+    <siteMapNode url="admin/productsbycat/hair.aspx" title="Hair"  description=""/>
+    <siteMapNode url="admin/productsbycat/face.aspx" title="Face"  description=""/>
+    <siteMapNode url="admin/productsbycat/journals.aspx"  title="Journals"  description=""/>
+    <siteMapNode url="admin/productsbycat/nails.aspx" title="Nails"  description="" />
+    <siteMapNode url="admin/productsbycat/lips.aspx" title="Lips"  description="" />
+    <siteMapNode class ="admin/order_history.aspx" url="admin/order_history.aspx" title="Order History" description=""/>
       <siteMapNode url="admin/add_newproducts.aspx" title="Add New Products"  description="" />
-    
-
   </siteMapNode>
 </siteMap>  

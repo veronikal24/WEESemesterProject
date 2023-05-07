@@ -18,6 +18,59 @@
     
   
 }
+/* Apply a modern sans-serif font to the whole page */
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+/* Add a gradient background to the page */
+body {
+  background: linear-gradient(to bottom, #ffffff, #f1f1f1);
+}
+
+/* Center the content and give it a max-width */
+.order-history {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Style the table to make it more readable */
+#OrderHistoryGrid {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+#OrderHistoryGrid th, #OrderHistoryGrid td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #cccccc;
+}
+
+#OrderHistoryGrid th {
+  background-color: #f1f1f1;
+}
+
+/* Style the heading to make it stand out */
+h1 {
+  font-size: 36px;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 40px;
+  color: #333333;
+}
+
+h2 {
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 20px;
+  color: #333333;
+}
+
 
 /* Set the style for each item in the grid */
 .product{
@@ -31,6 +84,13 @@
   width: 100%; /* Set the width of the image to fill the container */
   height: auto; /* Set the height of the image to be proportional */
 }
+.proceed-to-payment {
+    background-color: #f5f5f5;
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-top: 10px;
+}
+
 .image-grid {
   margin: 0;
   padding: 0;
@@ -189,7 +249,8 @@ nav img.logo {
   height: 100%; /* Set the height of the sidebar */
   background-color: #f1f1f1; /* Set the background color of the sidebar */
   overflow-x: hidden; /* Hide the horizontal scrollbar */
-  padding-top: 20px; /* Add some padding at the top */
+  padding-top:270px; /* Add some padding at the top */
+
 }
 
 #menu {
@@ -197,7 +258,7 @@ nav img.logo {
   flex-direction: column;
   list-style-type: none;
   background-color: #A64D79;
-  padding: 10px;
+  margin:0;
   width: 150px;
 }
 #footer {
@@ -217,16 +278,27 @@ nav img.logo {
 .menunode td {
   display: block;
   color: #A64D79;
-  margin: 5px 0;
+  margin: 0;
   padding: 10px;
- 
   text-align: center;
 }
 
 .nodes,
 .menunode td a {
   display: block;
-  margin-left: 20px;
+  margin-left: 10px;
+  background-color:	#E6D2D4;
+  border-style:outset;
+  margin:0;
+  font-size:30px;
+  text-decoration:double;
+  color:black;
+  border-color:black;
+    width: 220px;
+
+}
+.menunode td {
+    height:2px;
 }
 
 .box {
@@ -399,6 +471,15 @@ nav img.logo {
     .order-items {
         margin-top: 20px;
     }
+    /* Make font size smaller for Product Name column */
+#OrderHistoryGrid td:nth-child(2) {
+    font-size: 12px;
+}
+/* Make font size smaller for GridView columns */
+#OrderHistoryGrid th,
+#OrderHistoryGrid td {
+  font-size: 14px;
+}
     /* Basic menu styles */
 .menu {
   display: flex;

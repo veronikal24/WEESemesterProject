@@ -2,7 +2,14 @@
 <siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
 
   <siteMapNode url="login.aspx" title="Log in"  description="" >
-    <siteMapNode url="products.aspx" title="Products"  description="" />
+
+    <siteMapNode url="products.aspx" title="Products"  description=""/>
+    <siteMapNode url="productsbycat/body.aspx" title="Body"  description=""/>
+      <siteMapNode url="productsbycat/hair.aspx" title="Hair"  description=""/>
+        <siteMapNode url="productsbycat/face.aspx" title="Face"  description=""/>
+          <siteMapNode url="productsbycat/journals.aspx"  title="Journals"  description=""/>
+          <siteMapNode url="productsbycat/nails.aspx" title="Nails"  description="" />
+    <siteMapNode url="productsbycat/lips.aspx" title="Lips"  description="" />
 
   </siteMapNode>
 </siteMap>

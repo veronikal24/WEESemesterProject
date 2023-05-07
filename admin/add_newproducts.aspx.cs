@@ -18,7 +18,7 @@ public partial class admin_add_newproducts : System.Web.UI.Page
     {
 
     }
-    protected void uploadButton_Click(object sender, EventArgs e)
+    protected void add_new_product(object sender, EventArgs e)
     {
         if (fileUploadControl.HasFile)
         {
@@ -39,12 +39,20 @@ public partial class admin_add_newproducts : System.Web.UI.Page
             
                 System.Web.UI.Control control = (System.Web.UI.Control)sender;
                 TextBox amount = (TextBox)control.FindControl("name");
-                int name = 0;
+                string name = "";
                 if (amount != null)
                 {
-                    string amountValue = amount.Text;
-                    name = int.Parse(amountValue);
-                
+                    name = amount.Text;
+                 
+                }
+
+               
+                TextBox cat = (TextBox)control.FindControl("category");
+                string category = "";
+                if (amount != null)
+                {
+                    category =cat.Text;
+
                 }
                
                 TextBox desc = (TextBox)control.FindControl("description");
@@ -68,7 +76,7 @@ public partial class admin_add_newproducts : System.Web.UI.Page
 
                 // Creates a connection to our database
                 SqlConnection con = new SqlConnection(dbstring2);
-                string sqlStr = " INSERT INTO [dbo].[Product] ([name], [price], [description], [image_url]) VALUES (@product_name, @price, @desciption, @filepath)";
+                string sqlStr = " INSERT INTO [dbo].[Product] ([name], [price],[category], [description], [image_url]) VALUES (@product_name, @price,@category, @desciption, @filepath)";
 
                 // Open the database connection
                 con.Open();
@@ -79,6 +87,7 @@ public partial class admin_add_newproducts : System.Web.UI.Page
                 // Fill in the parameters in our prepared SQL statement
                 sqlCmd.Parameters.AddWithValue("@product_name", name);
                 sqlCmd.Parameters.AddWithValue("@price", price);
+                sqlCmd.Parameters.AddWithValue("@category", category);
                 sqlCmd.Parameters.AddWithValue("@desciption", descrip);
                 sqlCmd.Parameters.AddWithValue("@filepath", uploadedImage.ImageUrl);
 

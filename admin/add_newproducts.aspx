@@ -7,7 +7,7 @@
         <h1>Here you can add new products: 
     </h1>
     
-    <asp:FileUpload ID="fileUploadControl" runat="server" />
+    <asp:FileUpload ID="fileUploadControl" runat="server" CssClass="file-upload" />
               <br />
        
         <h2>Product Information:</h2>
@@ -17,6 +17,9 @@
 <label for="description">Description:</label>
     <asp:TextBox ID="description" runat="server" Enabled="true" ></asp:TextBox>
  <br />
+    <label for="Category">Category:</label>
+    <asp:TextBox ID="category" runat="server" Enabled="true" ></asp:TextBox>
+<br />
          <label for="price">Price</label>
     <asp:TextBox ID="price" runat="server" Enabled="true" ></asp:TextBox>
         <br />
@@ -30,28 +33,31 @@
     <br />
     <style>     /* Headings */
     h1, h2 {
-        color: #FF69B4;
+        color:black;
         font-weight: bold;
         margin: 0 0 20px 0;
-        text-align: center;
+             margin-left:150px;
+       
     }
 
     /* Labels */
     label {
-        color: #FF69B4;
+        color: black;
         display: block;
         font-weight: bold;
         margin-bottom: 10px;
+             margin-left:150px;
     }
 
     /* Textboxes */
     input[type="text"] {
-        background-color: #FEEEF3;
-        border: 1px solid #FF69B4;
+        background-color: #E6D2D4;
+        border: 1px solid #E6D2D4;
         color: #333333;
         font-size: 16px;
         padding: 10px;
-        width: 100%;
+        width: 250px;
+        margin-left:150px;
     }
 
     /* File upload */
@@ -61,7 +67,7 @@
 
     /* Buttons */
     input[type="button"], input[type="submit"] {
-        background-color: #FF69B4;
+        background-color: #E6D2D4;
         border: none;
         color: #FFFFFF;
         cursor: pointer;
@@ -69,10 +75,11 @@
         font-weight: bold;
         padding: 10px 20px;
         text-transform: uppercase;
+             margin-left:150px;
     }
 
     input[type="button"]:hover, input[type="submit"]:hover {
-        background-color: #FFC0CB;
+        background-color: #E6D2D4;
         color: #333333;
     }
         /* Style for file upload control */
@@ -82,16 +89,18 @@
         padding: 10px;
         border-radius: 5px;
         margin-bottom: 10px;
+             margin-left:150px;
     }
 
     /* Style for file upload button */
     .file-upload-button {
-        background-color: #ed7b84; /* Pink */
+        background-color:#F2ACB9;
         border: none;
         color: white;
         padding: 10px;
         border-radius: 5px;
         cursor: pointer;
+             margin-left:190px;
     }
 
     /* Error message */
@@ -102,8 +111,7 @@
         text-align: center;
     }
 </style>
-<
-<asp:Button ID="uploadButton" runat="server" Text="Upload File" OnClick="uploadButton_Click" />
+<asp:Button ID="uploadButton" runat="server" Text="Upload File" OnClick="add_new_product" />
               <br />
     <asp:Image ID="uploadedImage" runat="server" Visible="false" />
               <br />

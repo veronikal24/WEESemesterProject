@@ -22,8 +22,7 @@
         <ItemTemplate>
             <!-- The ItemTemplate defines how each item in the database will be displayed. 
               To get the value from each column we can use Eval("columnName") 
-         --> 
-         <div class ="grid-container">
+    
         
                <!-- Set the image by using the conditional operator. If no image path is in the 
                     database, then use standard image, else use the image path from the database 
@@ -45,7 +44,7 @@
                   <br />
             
  
-        </div>
+   
         </ItemTemplate>
             
                  <LayoutTemplate> 
@@ -73,10 +72,8 @@
     SUM(ROUND([price] * [amount], 2)) AS customer_total_price
 FROM [ORDER] 
 WHERE [customer_id] = @customer_id
-AND [timestamp] >= DATEADD(minute, -1, 
-    (SELECT MAX([timestamp]) FROM [ORDER] WHERE [customer_id] = @customer_id))
-GROUP BY [price], [amount], [image_url], [product_name], [customer_id]"
-    OnSelecting="SqlDataSource1_Selecting">
+AND [order_id] = (SELECT MAX([order_id]) FROM [ORDER] WHERE [customer_id] = @customer_id)
+GROUP BY [price], [amount], [image_url], [product_name], [customer_id]"    OnSelecting="SqlDataSource1_Selecting">
     <SelectParameters>
         <asp:Parameter Name="customer_id"/>
     </SelectParameters>
